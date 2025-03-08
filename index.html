@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yeşil Ev Ürünleri</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome Kütüphanesi -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   </head>
+    
+<body>
+
+ <!-- Header -->
+ <header class="header">
+    <div class="container">
+        <h1 class="logo">EcoHome Essentials</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#products">Ürünler</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li class="cart-container">
+                    <!-- Sepet Butonu -->
+                    <a href="#cart" id="cart-btn" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+
+            <!-- Favori Butonu (Menüde) -->
+<div class="menu-favorite-btn" id="favorite-btn">
+    <i class="fas fa-heart" id="heart-icon"></i>
+    <span id="favorite-count">0</span> <!-- Favori sayısı -->
+</div>
+
+<!-- Favoriler Kutusu -->
+<div id="favorite-container" class="favorite-container" style="display: none;">
+    <h2>Favori Ürünler</h2>
+    <p>Henüz favori ürün yok.</p>
+</div>
+              </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
+        </nav>
+    </div>
+</header>
+   <!-- Hero Section -->
+   <section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Çevre Dostu Ev Ürünleri</h2>
+        <p>Doğal ve sürdürülebilir yaşam için en iyi ürünler.</p>
+        <a href="#products" class="btn special-btn">Ürünlerimizi Keşfedin</a>
+    </div>
+</section>
+
+<div class="text-container">
+    <h1>Çevre Dostu Ev Ürünleri</h1>
+    <p>Geleceğimizi korumak için küçük değişiklikler büyük farklar yaratır! Çevre dostu ev ürünleriyle hem doğayı koruyabilir hem de sağlıklı ve sürdürülebilir bir yaşam tarzı benimseyebilirsiniz. Doğal malzemelerden üretilmiş, geri dönüştürülebilir ve enerji tasarrufu sağlayan ürünler sayesinde evinizde sürdürülebilirliği destekleyin.</p>
+    
+    <h2>Neden Çevre Dostu Ürünleri Tercih Etmeliyiz?</h2>
+    <ul>
+        <li><strong>Daha Sağlıklı Bir Yaşam:</strong> Kimyasal içermeyen organik temizlik ve kişisel bakım ürünleri, hem sizin hem de ailenizin sağlığını korur.</li>
+        <li><strong>Atık Miktarını Azaltır:</strong> Tek kullanımlık plastikler yerine uzun ömürlü ve geri dönüştürülebilir ürünler tercih ederek çevre kirliliğini önleyebilirsiniz.</li>
+        <li><strong>Enerji ve Su Tasarrufu Sağlar:</strong> Doğa dostu tasarlanmış cihazlar ve sistemler, daha az enerji ve su tüketerek doğayı korur ve faturalarınızı azaltır.</li>
+    </ul>
+    
+    <h2>Doğaya Katkıları Nelerdir?</h2>
+    <ul>
+        <li><strong>Karbon Ayak İzinizi Azaltır:</strong> Sürdürülebilir üretim süreçlerinden geçen ürünler, doğaya daha az zarar verir ve çevresel etkinizi minimuma indirir.</li>
+        <li><strong>Doğal Kaynakları Korur:</strong> Geri dönüştürülmüş ve yenilenebilir malzemeler kullanılarak üretilen ürünler, ormanların ve su kaynaklarının tükenmesini engeller.</li>
+        <li><strong>Biyoçözünür ve Geri Dönüştürülebilir Alternatifler:</strong> Plastik yerine bambu, cam ve metal gibi malzemeler kullanılarak üretilen ürünler, doğaya zarar vermeden yok olabilir veya tekrar kullanılabilir.</li>
+    </ul>
+    
+    <p><strong>Gelecek nesillere daha yaşanabilir bir dünya bırakmak için doğa dostu ürünleri tercih edin. Küçük seçimler büyük değişimler yaratır! 🌿♻️</strong></p>
+</div>
+
+
+ 
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Ürünlerimiz</h2>
+        <div class="product-grid">
+            <!-- Her bir ürün için ortak yapı -->
+            <div class="product-item">
+                <img src="images/bambu.jpg" alt="Bambu Diş Fırçası">
+                <h3>Bambu Diş Fırçası</h3>
+                <p>₺124.90</p>
+                <button class="btn cart-btn" data-name="Bambu Diş Fırçası" data-price="₺124.90" data-image="images/bambu.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Bambu Diş Fırçası" data-price="₺124.90" data-image="images/bambu.jpg">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/sabun.jpeg" alt="Doğal Sabun">
+                <h3>Doğal Sabun</h3>
+                <p>₺199.99</p>
+                <button class="btn" data-name="Doğal Sabun" data-price="₺199.99" data-image="images/sabun.jpeg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Doğal Sabun" data-price="₺199.99" data-image="images/sabun.jpeg">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/ahsap.jpg" alt="Ahşap Mutfak Gereçleri">
+                <h3>Ahşap Mutfak Gereçleri</h3>
+                <p>₺149.90</p>
+                <button class="btn" data-name="Ahşap Mutfak Gereçleri" data-price="₺149.90" data-image="images/ahsap.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Ahşap Mutfak Gereçleri" data-price="₺149.90" data-image="images/ahsap.jpg">
+                    <i class="fas fa-heart"></i> 
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/maske.jpg" alt="Doğal Yüz Maskesi">
+                <h3>Doğal Yüz Maskesi</h3>
+                <p>₺499.90</p>
+                <button class="btn" data-name="Doğal Yüz Maskesi" data-price="₺499.90" data-image="images/maske.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Doğal Yüz Maskesi" data-price="₺499.90" data-image="images/maske.jpg">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/eko_su.jpg" alt="Eko Dostu Su Şişeleri">
+                <h3>Eko Dostu Su Şişeleri</h3>
+                <p>₺843.99</p>
+                <button class="btn" data-name="Eko Dostu Su Şişeleri" data-price="₺843.99" data-image="images/eko_su.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Eko Dostu Su Şişeleri" data-price="₺843.99" data-image="images/eko_su.jpg">
+                    <i class="fas fa-heart"></i> 
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/pipet.jpg" alt="Bambu Pipetler">
+                <h3>Bambu Pipetler</h3>
+                <p>₺318.00</p>
+                <button class="btn" data-name="Bambu Pipetler" data-price="₺318.00" data-image="images/pipet.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Bambu Pipetler" data-price="₺318.00" data-image="images/pipet.jpg">
+                    <i class="fas fa-heart"></i> 
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/temizlik.jpg" alt="Sürdürülebilir Temizlik Ürünleri">
+                <h3>Sürdürülebilir Temizlik Ürünleri</h3>
+                <p>₺945.00</p>
+                <button class="btn" data-name="Sürdürülebilir Temizlik Ürünleri" data-price="₺945.00" data-image="images/temizlik.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Sürdürülebilir Temizlik Ürünleri" data-price="₺945.00" data-image="images/temizlik.jpg">
+                    <i class="fas fa-heart"></i> 
+                </button>
+            </div>
+            
+            <div class="product-item">
+                <img src="images/sabunluk.jpg" alt="Ahşap Sabunluk ve Banyo Ürünleri">
+                <h3>Ahşap Sabunluk ve Banyo Ürünleri</h3>
+                <p>₺409.90</p>
+                <button class="btn" data-name="Ahşap Sabunluk ve Banyo Ürünleri" data-price="₺409.90" data-image="images/sabunluk.jpg">
+                    <i class="fas fa-shopping-cart"></i> Sepete Ekle
+                </button>
+                <button class="btn favorite-btn" data-name="Ahşap Sabunluk ve Banyo Ürünleri" data-price="₺409.90" data-image="images/sabunluk.jpg">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Sepet içeriği -->
+<div class="cart-items-container">
+    <div class="cart-item">
+        <!-- Sepet öğesi burada listelenecek -->
+    </div>
+</div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2>Hakkımızda</h2>
+            <p>EcoHome Essentials olarak, doğaya saygılı ve sürdürülebilir ürünlerle daha bilinçli bir yaşam tarzını destekliyoruz.
+                 Günlük hayatta sıkça kullanılan kişisel bakım, mutfak ve temizlik ürünlerini çevre dostu alternatiflerle sunarak,
+                 hem sizin sağlığınızı hem de gezegenimizi korumayı hedefliyoruz.</p>
+            <p>Ürün yelpazemizde bambu diş fırçalarından doğal sabunlara, 
+               eko dostu su şişelerinden sürdürülebilir temizlik ürünlerine kadar pek çok seçenek bulunuyor. </p>
+            <p>Her biri çevreye zarar vermeyen malzemelerle üretilmiş olup, plastik kullanımını azaltarak doğaya katkı sağlamayı amaçlıyor.
+            <strong>Küçük değişiklikler, büyük farklar yaratır.</strong> Daha yeşil bir gelecek için siz de bu dönüşümün bir parçası olun!🌿</p>
+
+            <div class="about-icons">
+                <div>
+                    <i class="fas fa-seedling"></i>
+                    <p>Doğal Malzemeler</p>
+                </div>
+                <div>
+                    <i class="fas fa-recycle"></i>
+                    <p>Sürdürülebilir Üretim</p>
+                </div>
+                <div>
+                    <i class="fas fa-leaf"></i>
+                    <p>Çevre Dostu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>İletişim</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-posta" required>
+            <textarea placeholder="Mesajınız" rows="5" required></textarea>
+            <button type="submit" class="btn">Gönder</button>
+        </form>
+    </section>
+     <!-- İletişim bilgileri -->
+     <div class="contact-info">
+        <h3>Bizimle İletişime Geçin</h3>
+        <p>E-posta: <a href="mailto:info@ecohome.com">info@ecohome.com</a></p>
+        <p>Telefon: <a href="tel:+905012345678">+90 501 234 56 78</a></p>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 EcoHome Essentials. Tüm hakları saklıdır.</p>
+        <p>&copy; Web Tasarım Begüm Narmanlı</p>
+    </footer>
+    <script src="e_ticaret.js"></script>
+    </body>
+    
+</html>
