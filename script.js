@@ -112,15 +112,20 @@ if (scrollBtn) {
     });
   });
 }
-window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader-fashion');
-    
-    // Yükleme süresini kasıtlı olarak 2000 milisaniye (2 saniye) uzatıyoruz
-    setTimeout(function() {
-        if (preloader) {
-            preloader.classList.add('hidden');
-            // İsteğe bağlı: Preloader kaybolduktan sonra body'yi görünür yap
-            document.body.style.overflow = ''; 
-        }
-    }, 2000); // <-- Buradaki süre (2000ms), gecikmenin süresidir.
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader-fashion");
+  setTimeout(function () {
+    if (preloader) {
+      preloader.classList.add("hidden");
+      window.scrollTo(0, 0);
+      if (window.location.hash) {
+        history.replaceState(
+          "",
+          document.title,
+          window.location.pathname + window.location.search
+        );
+      }
+      document.body.style.overflow = "";
+    }
+  }, 2000);
 });
