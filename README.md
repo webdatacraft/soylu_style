@@ -26,7 +26,7 @@ Daha sonra, dosyaları bir tarayıcıda açarak görüntüleyebilirsiniz.
 ## 🛠️ Kullanılan Teknolojiler
 - **HTML5** – Yapıyı oluşturmak için
 - **CSS3** – Modern ve duyarlı tasarım için
-- **JavaScript** – Dinamik içerikler için (eğer eklediysen)
+- **JavaScript** – Dinamik içerikler için
 
 ## 🎯 Geliştirme
 Geliştirmeye katkıda bulunmak istiyorsanız, aşağıdaki adımları takip edebilirsiniz:
@@ -52,3 +52,4 @@ Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için [LICENSE](L
 ---
 
 💖 **Desteklemek için projeyi yıldızlamayı unutmayın! ⭐**
+
