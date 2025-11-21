@@ -144,6 +144,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
 }
+
 * {
   margin: 0;
   padding: 0;
