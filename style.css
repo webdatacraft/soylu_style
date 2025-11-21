@@ -7,113 +7,118 @@
    ======================================== */
 
 #preloader-fashion {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--light-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
 }
 
 #preloader-fashion.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .fashion-loader-container {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    animation: loader-rotate 4s linear infinite;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  animation: loader-rotate 4s linear infinite;
 }
 
 /* Her Bir Segment Grubu (Yay + İkon) */
 .loader-segment-group {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.loader-segment-group:nth-child(1) { transform: rotate(30deg); }
-.loader-segment-group:nth-child(2) { transform: rotate(150deg); }
-.loader-segment-group:nth-child(3) { transform: rotate(270deg); }
-
+.loader-segment-group:nth-child(1) {
+  transform: rotate(30deg);
+}
+.loader-segment-group:nth-child(2) {
+  transform: rotate(150deg);
+}
+.loader-segment-group:nth-child(3) {
+  transform: rotate(270deg);
+}
 
 /* Kesik Yay (Arc) Oluşturma ) */
 .loader-arc {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 10px solid transparent;
-    box-sizing: border-box; 
-    
-    border-top: 10px solid; 
-    transform: rotate(0deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  box-sizing: border-box;
 
-    top: 0; 
-    left: 0;
+  border-top: 10px solid;
+  transform: rotate(0deg);
+
+  top: 0;
+  left: 0;
 }
 
 /* Yay Renkleri (GÜNCELLENDİ) */
 .arc-pink {
-    border-color: var(--primary-color) transparent transparent transparent; 
+  border-color: var(--primary-color) transparent transparent transparent;
 }
 .arc-red {
-    border-color: var(--primary-dark) transparent transparent transparent; 
+  border-color: var(--primary-dark) transparent transparent transparent;
 }
 .arc-gold {
-    border-color: var(--secondary-color) transparent transparent transparent; 
+  border-color: var(--secondary-color) transparent transparent transparent;
 }
 
-/* İkon Konumlandırma (GÜNCELLENDİ) */
+/* İkon Konumlandırma */
 .loader-icon {
-    position: absolute;
-    top: 200px;
-    left: 100px;
-    font-size: 28px;
-    color: var(--accent-color);
-    animation: icon-rotate 4s linear infinite reverse; 
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  font-size: 28px;
+  color: var(--accent-color);
+  animation: icon-rotate 4s linear infinite reverse;
 }
 
 /* Yükleme Metni */
 .loading-text {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    font-weight: bold;
-    margin-top: 30px;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-top: 30px;
 }
 
 /* --- ANİMASYONLAR --- */
 
 /* 1. Tüm Yapının Dönüşü (Yavaşlatılmış) */
 @keyframes loader-rotate {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* 2. İkonun Ters Dönüşü */
 @keyframes icon-rotate {
-    to {
-        transform: rotate(-360deg);
-    }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 /* ANA DÖNÜŞ ANİMASYONU */
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 :root {
@@ -125,9 +130,7 @@
   --primary-dark: #d4547d;
 }
 
-/* ---------------------------------- */
-/* SCROLLBAR STİLİ (Chrome, Safari, Edge) */
-/* ---------------------------------- */
+/* DESKTOP SCROLLBAR */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -142,7 +145,20 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
+  background: var(--light-bg);
+}
+
+/* FIREFOX */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--light-bg);
+}
+
+/* ---------------------------------- */
+/* MOBİL VE TABLET (Android/iOS) */
+.scroll-container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 * {

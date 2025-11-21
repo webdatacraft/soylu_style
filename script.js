@@ -89,29 +89,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // YUKARI DÖN BUTONU İŞLEVİ
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    if (scrollBtn) {
-      scrollBtn.style.display = "flex";
-    }
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "flex";
   } else {
-    if (scrollBtn) {
-      scrollBtn.style.display = "none";
-    }
+    scrollBtn.style.display = "none";
   }
-};
+});
 
-if (scrollBtn) {
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-}
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// PRELOADER
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader-fashion");
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+      document.body.style.overflow = "";
+    }, 3000);
+  }
+});
+
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader-fashion");
   setTimeout(function () {
